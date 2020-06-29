@@ -787,7 +787,6 @@ id icon
 id icon_group
 id ifRoom
 id image
-id imageView
 id info
 id invisible
 id italic
@@ -800,6 +799,7 @@ id list_item
 id message
 id middle
 id multiply
+id name
 id never
 id none
 id normal
@@ -812,6 +812,7 @@ id packed
 id parent
 id parentPanel
 id percent
+id profile_image
 id progress_circular
 id progress_horizontal
 id radio
@@ -861,10 +862,8 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
-id textView
-id textView2
-id textView3
 id time
+id timeline
 id title
 id titleDividerNoCustom
 id title_template
@@ -874,6 +873,7 @@ id unchecked
 id uniform
 id up
 id useLogo
+id username
 id withText
 id wrap
 id wrap_content
