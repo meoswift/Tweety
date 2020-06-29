@@ -10,6 +10,7 @@ MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/ltran10/.gradle/caches/t
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/fa52e002ae9e78e35c25fee9f61d47d2/jetified-glide-4.11.0/AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/75fe1a0d0ea641341446dfd6b8974e96/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/cff0d1b30776eaeafd152d3c76e2da6a/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/98533a75c963d389d2db7b5a19727bc5/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.room:room-runtime:2.2.5] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/94408f450c40aad162bc9708d96445f2/room-runtime-2.2.5/AndroidManifest.xml:17:1-31:12
 MERGED from [com.facebook.stetho:stetho-okhttp3:1.5.1] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/b8baad7e5d8c17b446fd43512a69256e/jetified-stetho-okhttp3-1.5.1/AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.stetho:stetho:1.5.1] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/5f6c4b450ce3b16332c25c32d6a2ffdd/jetified-stetho-1.5.1/AndroidManifest.xml:2:1-13:12
@@ -26,6 +27,7 @@ MERGED from [androidx.core:core:1.1.0] /Users/ltran10/.gradle/caches/transforms-
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/aace0d5da73d2c817f12bb96d6698e5c/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/201520ec0a185ec8f3b8dab96cf35d1d/jetified-gifdecoder-4.11.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/a14ae2a393856b1c4222776799827fd2/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/c4e2469658fdd8801a5306110b0915fc/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/fd65391c38f3334831748ea49cfefda5/sqlite-framework-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/539553351326de75a5ede6ed48c38438/sqlite-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/54ec9a60a0f20829d9c5323f1ce0908c/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
@@ -35,7 +37,6 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ltra
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/e2041232485bdf4d2a09c36930218fc5/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/0b3ed2b8b9ba103e713cc57e24141ba7/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/80494d026c905f06e4c8b45b3569cb2d/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/c4e2469658fdd8801a5306110b0915fc/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-39:12
 INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-39:12
 INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-39:12
@@ -149,6 +150,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/ltran10/.g
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/75fe1a0d0ea641341446dfd6b8974e96/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/cff0d1b30776eaeafd152d3c76e2da6a/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/cff0d1b30776eaeafd152d3c76e2da6a/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/98533a75c963d389d2db7b5a19727bc5/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/98533a75c963d389d2db7b5a19727bc5/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.room:room-runtime:2.2.5] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/94408f450c40aad162bc9708d96445f2/room-runtime-2.2.5/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.2.5] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/94408f450c40aad162bc9708d96445f2/room-runtime-2.2.5/AndroidManifest.xml:20:5-22:41
 MERGED from [com.facebook.stetho:stetho-okhttp3:1.5.1] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/b8baad7e5d8c17b446fd43512a69256e/jetified-stetho-okhttp3-1.5.1/AndroidManifest.xml:7:5-9:41
@@ -181,6 +184,8 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/ltran10/.gradle
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/201520ec0a185ec8f3b8dab96cf35d1d/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/a14ae2a393856b1c4222776799827fd2/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/a14ae2a393856b1c4222776799827fd2/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/c4e2469658fdd8801a5306110b0915fc/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/c4e2469658fdd8801a5306110b0915fc/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/fd65391c38f3334831748ea49cfefda5/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/fd65391c38f3334831748ea49cfefda5/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/539553351326de75a5ede6ed48c38438/sqlite-2.0.1/AndroidManifest.xml:20:5-44
@@ -199,8 +204,6 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/ltran10/.gradl
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/0b3ed2b8b9ba103e713cc57e24141ba7/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/80494d026c905f06e4c8b45b3569cb2d/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/80494d026c905f06e4c8b45b3569cb2d/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/c4e2469658fdd8801a5306110b0915fc/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/c4e2469658fdd8801a5306110b0915fc/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml
 INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion

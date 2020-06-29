@@ -849,6 +849,7 @@ id standard
 id start
 id submenuarrow
 id submit_area
+id swipeContainer
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -863,6 +864,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id time
+id timeStamp
 id timeline
 id title
 id titleDividerNoCustom

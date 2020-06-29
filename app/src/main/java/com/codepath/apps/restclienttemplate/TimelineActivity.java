@@ -1,8 +1,10 @@
 package com.codepath.apps.restclienttemplate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +26,7 @@ public class TimelineActivity extends AppCompatActivity {
 
     TwitterClient client;
     RecyclerView timelineRv;
+    SwipeRefreshLayout swipeContainer;
     TweetsAdapter adapter;
     List<Tweet> tweets;
 
@@ -33,29 +36,50 @@ public class TimelineActivity extends AppCompatActivity {
         setContentView(R.layout.activity_timeline);
         getSupportActionBar().setTitle("Timeline");
 
+
+        // Lookup the swipe container view
+        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
+        // Configure the refreshing colors
+        swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                displayHomeTimeline();
+            }
+        });
+
+        // find recycler view in layout
+        timelineRv = findViewById(R.id.timeline);
         // initialize tweets so we don't pass null into adapter
         tweets = new ArrayList<>();
-
-        // set up adapter for recyclerview
-        timelineRv = findViewById(R.id.timeline);
+        // create a new adapter
         adapter = new TweetsAdapter(tweets, getApplicationContext());
+        // set adapter to RV to display items
         timelineRv.setAdapter(adapter);
+        // set layout as linear
         timelineRv.setLayoutManager(new LinearLayoutManager(this));
 
         // create an instance of the current Twitter client
         client = TwitterApp.getRestClient(this);
-        displayHomeTimeline(client);
+        displayHomeTimeline();
     }
 
-    private void displayHomeTimeline(TwitterClient client) {
+    private void displayHomeTimeline() {
         client.getHomeTimeline(new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Headers headers, JSON json) {
                 JSONArray data = json.jsonArray;
                 try {
-                    tweets.addAll(Tweet.fromJsonArray(data));
-                    // when data is parsed, notify the adapter to update view
-                    adapter.notifyDataSetChanged();
+                    // clear out old items before fetching new ones on refresh
+                    adapter.clear();
+                    // add all tweets to adapter to display to view
+                    adapter.addAll(Tweet.fromJsonArray(data));
+                    // signal refresh has finished
+                    swipeContainer.setRefreshing(false);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
