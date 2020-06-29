@@ -41,8 +41,6 @@ public class TimelineActivity extends AppCompatActivity {
                 JSONArray data = json.jsonArray;
                 try {
                     tweets = Tweet.fromJsonArray(data);
-                    Log.d("tweet list", tweets.toString());
-                    Log.d("length", String.valueOf(tweets.size()));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
