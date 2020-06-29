@@ -9,16 +9,18 @@ import com.codepath.apps.restclienttemplate.models.Tweet;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.Headers;
 
 public class TimelineActivity extends AppCompatActivity {
 
     TwitterClient client;
-
+    List<Tweet> tweets;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +39,12 @@ public class TimelineActivity extends AppCompatActivity {
             @Override
             public void onSuccess(int statusCode, Headers headers, JSON json) {
                 JSONArray data = json.jsonArray;
-                for (int i = 0; i < data.length(); i++) {
-                    Tweet tweet = Tweet.fromJson(
+                try {
+                    tweets = Tweet.fromJsonArray(data);
+                    Log.d("tweet list", tweets.toString());
+                    Log.d("length", String.valueOf(tweets.size()));
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
             }
 
