@@ -44,6 +44,10 @@
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/menu/menu_main.xml"
     },
     {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/layout_activity_compose.xml.flat",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/layout/activity_compose.xml"
+    },
+    {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/layout_activity_timeline.xml.flat",
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/layout/activity_timeline.xml"
     },

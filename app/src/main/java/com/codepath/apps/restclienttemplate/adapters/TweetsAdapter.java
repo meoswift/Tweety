@@ -48,7 +48,11 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         holder.name.setText(tweet.user.name);
         holder.username.setText(tweet.user.username);
         holder.timeStamp.setText(tweet.timeStamp);
-        Glide.with(context).load(tweet.user.profileImageUrl).into(holder.profileImage);
+
+        Glide.with(context)
+                .load(tweet.user.profileImageUrl)
+                .circleCrop()
+                .into(holder.profileImage);
     }
 
     @Override

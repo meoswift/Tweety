@@ -1,5 +1,6 @@
 package com.codepath.apps.restclienttemplate;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -9,6 +10,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +23,7 @@ import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcels;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,22 +39,16 @@ public class TimelineActivity extends AppCompatActivity {
     Toolbar toolbar;
     List<Tweet> tweets;
 
+    public static final int PUBLISH_TWEET_REQ = 123;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
 
-        toolbar = findViewById(R.id.timelineBar);
         // Add functionality when user click on an item on toolbar (e.g: compose)
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                if (item.getItemId() == R.id.compose)
-                    startComposeActivity();
-
-                return true;
-            }
-        });
+        toolbar = findViewById(R.id.timelineBar);
+        toolbarOptionsSelected();
 
         // Lookup the swipe container view
         swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
@@ -109,8 +106,31 @@ public class TimelineActivity extends AppCompatActivity {
         });
     }
 
+    private void toolbarOptionsSelected() {
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if (item.getItemId() == R.id.compose)
+                    startComposeActivity();
+
+                return true;
+            }
+        });
+    }
+
     private void startComposeActivity() {
         Intent intent = new Intent(this, ComposeActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, PUBLISH_TWEET_REQ);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PUBLISH_TWEET_REQ && resultCode == RESULT_OK) {
+            Tweet tweet = Parcels.unwrap(data.getParcelableExtra("tweet"));
+            tweets.add(0, tweet);
+            adapter.notifyDataSetChanged();
+            timelineRv.smoothScrollToPosition(0);
+        }
     }
 }
