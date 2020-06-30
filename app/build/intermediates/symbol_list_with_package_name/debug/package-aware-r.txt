@@ -674,6 +674,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable ic_compose_tweet
 drawable ic_launcher
 drawable notification_action_background
 drawable notification_bg
@@ -762,6 +763,7 @@ id checkbox
 id checked
 id chronometer
 id collapseActionView
+id compose
 id content
 id contentPanel
 id custom
@@ -866,6 +868,7 @@ id textSpacerNoTitle
 id time
 id timeStamp
 id timeline
+id timelineBar
 id title
 id titleDividerNoCustom
 id title_template
@@ -934,6 +937,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu login
+menu menu_main
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

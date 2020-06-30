@@ -1,13 +1,18 @@
 package com.codepath.apps.restclienttemplate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 
 import com.codepath.apps.restclienttemplate.adapters.TweetsAdapter;
 import com.codepath.apps.restclienttemplate.models.Tweet;
@@ -28,14 +33,25 @@ public class TimelineActivity extends AppCompatActivity {
     RecyclerView timelineRv;
     SwipeRefreshLayout swipeContainer;
     TweetsAdapter adapter;
+    Toolbar toolbar;
     List<Tweet> tweets;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
-        getSupportActionBar().setTitle("Timeline");
 
+        toolbar = findViewById(R.id.timelineBar);
+        // Add functionality when user click on an item on toolbar (e.g: compose)
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if (item.getItemId() == R.id.compose)
+                    startComposeActivity();
+
+                return true;
+            }
+        });
 
         // Lookup the swipe container view
         swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
@@ -91,5 +107,10 @@ public class TimelineActivity extends AppCompatActivity {
                 Log.e("TimelineActivity", "Error fetching home timeline!" + response);
             }
         });
+    }
+
+    private void startComposeActivity() {
+        Intent intent = new Intent(this, ComposeActivity.class);
+        startActivity(intent);
     }
 }
