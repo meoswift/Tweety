@@ -92,7 +92,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ltra
 	android:label
 		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:14:9-41
 	android:icon
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:13:9-45
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:13:9-49
 	android:allowBackup
 		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:12:9-35
 	android:theme

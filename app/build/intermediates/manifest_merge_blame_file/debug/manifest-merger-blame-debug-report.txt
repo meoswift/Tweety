@@ -26,8 +26,8 @@
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 17-->[androidx.core:core:1.1.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/1cd7eff88f5e86d0249af2958bf465f0/core-1.1.0/AndroidManifest.xml:24:18-86
 18        android:debuggable="true"
-19        android:icon="@drawable/ic_launcher"
-19-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:13:9-45
+19        android:icon="@mipmap/ic_launcher_round"
+19-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:13:9-49
 20        android:label="@string/app_name"
 20-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:14:9-41
 21        android:testOnly="true"

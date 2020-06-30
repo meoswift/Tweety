@@ -6,6 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.parceler.Parcel;
+import org.w3c.dom.Entity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -18,6 +19,7 @@ public class Tweet {
     public String text;
     public String timeStamp;
     public User user;
+    public String mediaUrl;
 
     public Tweet() {};
 
@@ -26,6 +28,7 @@ public class Tweet {
         tweet.text = data.getString("text");
         tweet.timeStamp = getRelativeTimeAgo(data.getString("created_at"));
         tweet.user = User.fromJson(data.getJSONObject("user"));
+        tweet.mediaUrl = Media.fromJson(data.getJSONObject("entities"));
 
         return tweet;
     }

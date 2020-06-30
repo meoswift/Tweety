@@ -69,6 +69,8 @@ public class TimelineActivity extends AppCompatActivity {
         timelineRv = findViewById(R.id.timeline);
         // initialize tweets so we don't pass null into adapter
         tweets = new ArrayList<>();
+        // set divide lines to recycler view
+        createViewDivider();
         // create a new adapter
         adapter = new TweetsAdapter(tweets, getApplicationContext());
         // set adapter to RV to display items
@@ -127,10 +129,18 @@ public class TimelineActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == PUBLISH_TWEET_REQ && resultCode == RESULT_OK) {
+            assert data != null;
             Tweet tweet = Parcels.unwrap(data.getParcelableExtra("tweet"));
             tweets.add(0, tweet);
             adapter.notifyDataSetChanged();
             timelineRv.smoothScrollToPosition(0);
         }
+    }
+
+    private void createViewDivider() {
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
+                DividerItemDecoration.VERTICAL);
+        dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.border));
+        timelineRv.addItemDecoration(dividerItemDecoration);
     }
 }
