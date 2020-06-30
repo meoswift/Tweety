@@ -75,10 +75,10 @@ public class ComposeActivity extends AppCompatActivity {
     private void validateTweet(String tweet) {
         if (tweet.isEmpty()) {
             Toast.makeText(this, "Sorry! Your tweet cannot be empty", Toast.LENGTH_SHORT).show();
-            tweetBtn.setClickable(false);
+            tweetBtn.setEnabled(false);
         }
         if (tweet.length() > MAX_TWEET_LENGTH)
-            tweetBtn.setClickable(false);
+            tweetBtn.setEnabled(false);
     }
 
 }
