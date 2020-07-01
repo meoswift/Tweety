@@ -57,7 +57,6 @@ public class Tweet {
             JSONArray mediaObjects = json.getJSONArray("media");
             JSONObject firstMedia = mediaObjects.getJSONObject(0);
             String url = firstMedia.getString("media_url_https");
-            Log.d("Tweet", url);
             return url;
         } catch (JSONException e) {
             e.printStackTrace();
@@ -69,12 +68,6 @@ public class Tweet {
         List<Tweet> tweets = new ArrayList<>();
         for (int i = 0; i < data.length(); i++) {
             Tweet tweet = fromJson((JSONObject) data.get(i));
-
-            if(tweet.mediaUrl != null)
-                Log.d("updated", tweet.mediaUrl);
-            else
-                Log.d("updated", "rip");
-
             tweets.add(tweet);
         }
 

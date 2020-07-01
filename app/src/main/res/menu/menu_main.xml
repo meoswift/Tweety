@@ -5,5 +5,5 @@
         android:id="@+id/compose"
         android:title="Compose"
         app:showAsAction="always"
-        android:icon="@drawable/ic_compose_tweet" />
+        android:icon="@drawable/ic_vector_compose" />
 </menu>

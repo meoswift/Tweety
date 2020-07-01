@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.codepath.apps.restclienttemplate.R;
 import com.codepath.apps.restclienttemplate.models.Tweet;
 
@@ -50,13 +52,12 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         holder.username.setText(tweet.user.username);
         holder.timeStamp.setText(tweet.timeStamp);
 
-
+        // display media on tweet if there is any
         if (tweet.mediaUrl != null) {
-            Log.d("TweetsAdapter", tweet.mediaUrl);
-
             Glide.with(context)
                     .load(tweet.mediaUrl)
-                    .
+                    .override(880,440)
+                    .transform(new CenterCrop(),new RoundedCorners(25))
                     .into(holder.media);
         } else {
             holder.media.setImageResource(0);
