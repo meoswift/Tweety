@@ -5,5 +5,10 @@
     <string name="login_label">Log in</string>
     <string name="intent_scheme">oauth</string>
     <string name="intent_host">codepathtweets</string>
+    <string name="tweet_content">tweet content</string>
+    <string name="username">username</string>
+    <string name="client_name">name</string>
+    <string name="time_ago">3m</string>
+    <string name="connect_to_twitter">Connect to Twitter</string>
 
 </resources>

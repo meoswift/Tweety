@@ -14,12 +14,15 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         app:counterEnabled="true"
-        app:counterMaxLength="280"
+        app:counterMaxLength="140"
         app:counterOverflowTextAppearance="@style/counterOverride"
+        app:boxStrokeColor="@color/twitter"
+        app:hintTextColor="@color/twitter"
         app:counterTextAppearance="@style/counterText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tweetBtn">
+        app:layout_constraintTop_toBottomOf="@+id/tweetBtn"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <EditText
             android:id="@+id/composer"
@@ -28,12 +31,14 @@
             android:ems="10"
             android:gravity="start|top"
             android:hint="What's happening?"
+            android:imeOptions="actionDone"
             android:inputType="textMultiLine"
-            android:minLines="5"
+            android:minLines="6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -44,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:backgroundTint="#1DA1F2"
+        android:backgroundTint="@color/twitter"
         android:onClick="onTweetClicked"
         android:text="Tweet"
         android:textColor="#FFFFFF"

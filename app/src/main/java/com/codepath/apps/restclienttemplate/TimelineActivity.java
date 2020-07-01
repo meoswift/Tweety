@@ -13,8 +13,10 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import com.codepath.apps.restclienttemplate.adapters.TweetsAdapter;
 import com.codepath.apps.restclienttemplate.models.Tweet;
@@ -38,6 +40,8 @@ public class TimelineActivity extends AppCompatActivity {
     TweetsAdapter adapter;
     Toolbar toolbar;
     List<Tweet> tweets;
+    ProgressBar miActionProgressItem;
+
 
     public static final int PUBLISH_TWEET_REQ = 123;
 
@@ -49,6 +53,9 @@ public class TimelineActivity extends AppCompatActivity {
         // Add functionality when user click on an item on toolbar (e.g: compose)
         toolbar = findViewById(R.id.timelineBar);
         toolbarOptionsSelected();
+
+        // Look up the progress bar in view
+        miActionProgressItem = findViewById(R.id.indeterminateBar);
 
         // Lookup the swipe container view
         swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
@@ -83,6 +90,7 @@ public class TimelineActivity extends AppCompatActivity {
         displayHomeTimeline();
     }
 
+
     private void displayHomeTimeline() {
         client.getHomeTimeline(new JsonHttpResponseHandler() {
             @Override
@@ -95,6 +103,8 @@ public class TimelineActivity extends AppCompatActivity {
                     adapter.addAll(Tweet.fromJsonArray(data));
                     // signal refresh has finished
                     swipeContainer.setRefreshing(false);
+                    // signal loading has finished
+                    miActionProgressItem.setVisibility(View.INVISIBLE);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
