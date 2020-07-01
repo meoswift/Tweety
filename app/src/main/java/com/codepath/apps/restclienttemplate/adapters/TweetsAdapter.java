@@ -1,6 +1,7 @@
 package com.codepath.apps.restclienttemplate.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,6 +50,18 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         holder.username.setText(tweet.user.username);
         holder.timeStamp.setText(tweet.timeStamp);
 
+
+        if (tweet.mediaUrl != null) {
+            Log.d("TweetsAdapter", tweet.mediaUrl);
+
+            Glide.with(context)
+                    .load(tweet.mediaUrl)
+                    .
+                    .into(holder.media);
+        } else {
+            holder.media.setImageResource(0);
+        }
+
         Glide.with(context)
                 .load(tweet.user.profileImageUrl)
                 .circleCrop()
@@ -67,6 +80,7 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         public TextView username;
         public TextView text;
         public TextView timeStamp;
+        public ImageView media;
 
         // this represents one line of tweet
         public ViewHolder(@NonNull View itemView) {
@@ -78,6 +92,7 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             username = itemView.findViewById(R.id.username);
             text = itemView.findViewById(R.id.text);
             timeStamp = itemView.findViewById(R.id.timeStamp);
+            media = itemView.findViewById(R.id.media);
         }
     }
 

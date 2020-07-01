@@ -1,12 +1,12 @@
 package com.codepath.apps.restclienttemplate.models;
 
 import android.text.format.DateUtils;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.parceler.Parcel;
-import org.w3c.dom.Entity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -28,7 +28,7 @@ public class Tweet {
         tweet.text = data.getString("text");
         tweet.timeStamp = getRelativeTimeAgo(data.getString("created_at"));
         tweet.user = User.fromJson(data.getJSONObject("user"));
-        tweet.mediaUrl = Media.fromJson(data.getJSONObject("entities"));
+        tweet.mediaUrl = getMedia(data.getJSONObject("entities"));
 
         return tweet;
     }
@@ -52,10 +52,29 @@ public class Tweet {
         return relativeDate;
     }
 
+    public static String getMedia(JSONObject json) {
+        try {
+            JSONArray mediaObjects = json.getJSONArray("media");
+            JSONObject firstMedia = mediaObjects.getJSONObject(0);
+            String url = firstMedia.getString("media_url_https");
+            Log.d("Tweet", url);
+            return url;
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public static List<Tweet> fromJsonArray(JSONArray data) throws JSONException {
         List<Tweet> tweets = new ArrayList<>();
         for (int i = 0; i < data.length(); i++) {
             Tweet tweet = fromJson((JSONObject) data.get(i));
+
+            if(tweet.mediaUrl != null)
+                Log.d("updated", tweet.mediaUrl);
+            else
+                Log.d("updated", "rip");
+
             tweets.add(tweet);
         }
 

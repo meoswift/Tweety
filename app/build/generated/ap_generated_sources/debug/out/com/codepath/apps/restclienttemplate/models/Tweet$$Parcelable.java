@@ -51,6 +51,7 @@ public class Tweet$$Parcelable
         } else {
             parcel$$1 .writeInt(identityMap$$0 .put(tweet$$1));
             parcel$$1 .writeString(tweet$$1 .timeStamp);
+            parcel$$1 .writeString(tweet$$1 .mediaUrl);
             parcel$$1 .writeString(tweet$$1 .text);
             com.codepath.apps.restclienttemplate.models.User$$Parcelable.write(tweet$$1 .user, parcel$$1, flags$$0, identityMap$$0);
         }
@@ -79,6 +80,7 @@ public class Tweet$$Parcelable
             tweet$$4 = new com.codepath.apps.restclienttemplate.models.Tweet();
             identityMap$$1 .put(reservation$$0, tweet$$4);
             tweet$$4 .timeStamp = parcel$$3 .readString();
+            tweet$$4 .mediaUrl = parcel$$3 .readString();
             tweet$$4 .text = parcel$$3 .readString();
             User user$$0 = com.codepath.apps.restclienttemplate.models.User$$Parcelable.read(parcel$$3, identityMap$$1);
             tweet$$4 .user = user$$0;
