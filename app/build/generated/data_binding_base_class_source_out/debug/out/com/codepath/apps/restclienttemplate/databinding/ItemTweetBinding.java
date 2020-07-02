@@ -4,6 +4,7 @@ package com.codepath.apps.restclienttemplate.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -20,13 +21,25 @@ public final class ItemTweetBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageView favBtn;
+
+  @NonNull
   public final ImageView media;
 
   @NonNull
   public final TextView name;
 
   @NonNull
+  public final GridLayout options;
+
+  @NonNull
   public final ImageView profileImage;
+
+  @NonNull
+  public final ImageView replyBtn;
+
+  @NonNull
+  public final ImageView retweetBtn;
 
   @NonNull
   public final TextView text;
@@ -37,13 +50,18 @@ public final class ItemTweetBinding implements ViewBinding {
   @NonNull
   public final TextView username;
 
-  private ItemTweetBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView media,
-      @NonNull TextView name, @NonNull ImageView profileImage, @NonNull TextView text,
-      @NonNull TextView timeStamp, @NonNull TextView username) {
+  private ItemTweetBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView favBtn,
+      @NonNull ImageView media, @NonNull TextView name, @NonNull GridLayout options,
+      @NonNull ImageView profileImage, @NonNull ImageView replyBtn, @NonNull ImageView retweetBtn,
+      @NonNull TextView text, @NonNull TextView timeStamp, @NonNull TextView username) {
     this.rootView = rootView;
+    this.favBtn = favBtn;
     this.media = media;
     this.name = name;
+    this.options = options;
     this.profileImage = profileImage;
+    this.replyBtn = replyBtn;
+    this.retweetBtn = retweetBtn;
     this.text = text;
     this.timeStamp = timeStamp;
     this.username = username;
@@ -76,6 +94,12 @@ public final class ItemTweetBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.favBtn;
+      ImageView favBtn = rootView.findViewById(id);
+      if (favBtn == null) {
+        break missingId;
+      }
+
       id = R.id.media;
       ImageView media = rootView.findViewById(id);
       if (media == null) {
@@ -88,9 +112,27 @@ public final class ItemTweetBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.options;
+      GridLayout options = rootView.findViewById(id);
+      if (options == null) {
+        break missingId;
+      }
+
       id = R.id.profile_image;
       ImageView profileImage = rootView.findViewById(id);
       if (profileImage == null) {
+        break missingId;
+      }
+
+      id = R.id.replyBtn;
+      ImageView replyBtn = rootView.findViewById(id);
+      if (replyBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.retweetBtn;
+      ImageView retweetBtn = rootView.findViewById(id);
+      if (retweetBtn == null) {
         break missingId;
       }
 
@@ -112,8 +154,8 @@ public final class ItemTweetBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemTweetBinding((ConstraintLayout) rootView, media, name, profileImage, text,
-          timeStamp, username);
+      return new ItemTweetBinding((ConstraintLayout) rootView, favBtn, media, name, options,
+          profileImage, replyBtn, retweetBtn, text, timeStamp, username);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

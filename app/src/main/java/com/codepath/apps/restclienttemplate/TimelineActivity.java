@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.codepath.apps.restclienttemplate.adapters.TweetsAdapter;
@@ -41,7 +42,7 @@ public class TimelineActivity extends AppCompatActivity {
     Toolbar toolbar;
     List<Tweet> tweets;
     ProgressBar miActionProgressItem;
-
+    EndlessRecyclerViewScrollListener scrollListener;
 
     public static final int PUBLISH_TWEET_REQ = 123;
 
@@ -49,6 +50,9 @@ public class TimelineActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
+
+        // create an instance of the current Twitter client
+        client = TwitterApp.getRestClient(this);
 
         // Add functionality when user click on an item on toolbar (e.g: compose)
         toolbar = findViewById(R.id.timelineBar);
@@ -83,15 +87,25 @@ public class TimelineActivity extends AppCompatActivity {
         adapter = new TweetsAdapter(tweets, getApplicationContext());
         // set adapter to RV to display items
         timelineRv.setAdapter(adapter);
-        // set layout as linear
-        timelineRv.setLayoutManager(new LinearLayoutManager(this));
+        // initialize a new linear layout manager
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        // set layout for recycler view
+        timelineRv.setLayoutManager(layoutManager);
 
-        // create an instance of the current Twitter client
-        client = TwitterApp.getRestClient(this);
+        scrollListener = new EndlessRecyclerViewScrollListener(layoutManager) {
+            @Override
+            public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
+                loadNextDataFromApi();
+            }
+        };
+
+        // Adds the scroll listener to recycler view
+        timelineRv.addOnScrollListener(scrollListener);
+
         displayHomeTimeline();
     }
 
-
+    // Display the home timeline when user load up the app
     private void displayHomeTimeline() {
         client.getHomeTimeline(new JsonHttpResponseHandler() {
             @Override
@@ -119,7 +133,7 @@ public class TimelineActivity extends AppCompatActivity {
         });
     }
 
-    // when user click an option in the toolbar, execute the correct function based on id
+    // When user click an option in the toolbar, execute the correct function based on id
     private void toolbarOptionsSelected() {
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
@@ -166,5 +180,32 @@ public class TimelineActivity extends AppCompatActivity {
         dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.border));
         // add dividers to timeline recycler view
         timelineRv.addItemDecoration(dividerItemDecoration);
+    }
+
+    // Load data from the next page of tweets for endless scrolling
+    public void loadNextDataFromApi() {
+        // Send an API request to retrieve appropriate paginated data
+        client.getNextPageOfTweets(new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Headers headers, JSON json) {
+                // Deserialize and construct new model objects from the API response
+                JSONArray data = json.jsonArray;
+                try {
+                    // Append the new data objects to the existing set of items inside the array of items
+                    adapter.addAll(Tweet.fromJsonArray(data));
+                    // Notify the adapter of the new items made with `notifyItemRangeInserted()
+                    adapter.notifyDataSetChanged();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
+                Log.e("TimelineActivity", "onFailure fetching next page!");
+            }
+            // id of the last tweet in the list will be max id
+            // we will load all the tweets whose id <= max id (so, older tweets)
+        }, tweets.get(tweets.size() - 1).maxId);
     }
 }

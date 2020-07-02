@@ -18,6 +18,7 @@ import java.util.Locale;
 public class Tweet {
     public String text;
     public String timeStamp;
+    public long maxId;
     public User user;
     public String mediaUrl;
 
@@ -27,6 +28,7 @@ public class Tweet {
         Tweet tweet = new Tweet();
         tweet.text = data.getString("text");
         tweet.timeStamp = getRelativeTimeAgo(data.getString("created_at"));
+        tweet.maxId = data.getLong("id");
         tweet.user = User.fromJson(data.getJSONObject("user"));
         tweet.mediaUrl = getMedia(data.getJSONObject("entities"));
 
