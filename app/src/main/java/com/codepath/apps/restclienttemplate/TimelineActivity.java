@@ -65,6 +65,7 @@ public class TimelineActivity extends AppCompatActivity {
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
 
+        // when user pull to refresh, update the timeline
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -118,39 +119,52 @@ public class TimelineActivity extends AppCompatActivity {
         });
     }
 
+    // when user click an option in the toolbar, execute the correct function based on id
     private void toolbarOptionsSelected() {
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                if (item.getItemId() == R.id.compose)
+                if (item.getItemId() == R.id.compose) {
                     startComposeActivity();
-
+                }
                 return true;
             }
         });
     }
 
+    // goes to compose activity when user clicks compose icon
     private void startComposeActivity() {
         Intent intent = new Intent(this, ComposeActivity.class);
+        // assign a request code so we get the correct data back
         startActivityForResult(intent, PUBLISH_TWEET_REQ);
     }
 
+    // get back the data from the compose activity to manually populate recyclerview
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        // retrieve the data the match our request code when we start activity
         if (requestCode == PUBLISH_TWEET_REQ && resultCode == RESULT_OK) {
             assert data != null;
+            // unwrap the tweet object that was returned
             Tweet tweet = Parcels.unwrap(data.getParcelableExtra("tweet"));
+            // add this tweet at the top of our list
             tweets.add(0, tweet);
+            // notify adapter to update recyclerview
             adapter.notifyDataSetChanged();
+            // scroll to the top automatically
             timelineRv.smoothScrollToPosition(0);
         }
     }
 
+    // create a divider for each item in the recyclerview
     private void createViewDivider() {
+        // create a divider decoration
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
                 DividerItemDecoration.VERTICAL);
+        // set drawable border as the divider
         dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.border));
+        // add dividers to timeline recycler view
         timelineRv.addItemDecoration(dividerItemDecoration);
     }
 }

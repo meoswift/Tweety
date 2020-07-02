@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_timeline.xml",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/layout/activity_timeline.xml"
+    },
+    {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_details.xml",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/layout/activity_details.xml"
+    },
+    {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_compose.xml",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/layout/activity_compose.xml"
+    },
+    {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_tweet.xml",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/layout/item_tweet.xml"
+    },
+    {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_login.xml",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/layout/activity_login.xml"
+    }
+]

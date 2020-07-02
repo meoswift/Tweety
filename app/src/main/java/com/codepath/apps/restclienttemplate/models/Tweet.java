@@ -49,6 +49,9 @@ public class Tweet {
             e.printStackTrace();
         }
 
+        String [] time = relativeDate.split(" ");
+        relativeDate = time[0] + time[1].charAt(0);
+
         return relativeDate;
     }
 

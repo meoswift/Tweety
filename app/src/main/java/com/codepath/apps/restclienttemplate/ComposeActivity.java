@@ -40,14 +40,13 @@ public class ComposeActivity extends AppCompatActivity {
         composer = findViewById(R.id.composer);
         tweetBtn = findViewById(R.id.tweetBtn);
         composerLayout = findViewById(R.id.composerLayout);
-
-        validateTweet();
     }
 
     // Set click listener on button
     public void onTweetClicked(View view) {
         // Make API call to publish tweet to timeline
         String tweet = composer.getText().toString();
+        validateTweet(tweet);
 
         client.publishTweet(tweet, new JsonHttpResponseHandler() {
             @Override
@@ -77,25 +76,21 @@ public class ComposeActivity extends AppCompatActivity {
 
     }
 
-    private void validateTweet() {
-        composerLayout.getEditText().addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence tweet, int i, int i1, int i2) { }
-
-            @Override
-            public void onTextChanged(CharSequence tweet, int i, int i1, int i2) {
-                if (tweet.length() == 0)
-                    tweetBtn.setEnabled(false);
-
-                if (tweet.length() > MAX_TWEET_LENGTH)
-                    tweetBtn.setEnabled(false);
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) { }
-        });
+    // makes sure that tweet is within 0 - 140 characters range
+    private void validateTweet(String tweet) {
+        if (tweet.length() == 0) {
+            Toast.makeText(ComposeActivity.this,
+                    "Sorry! Your tweet cannot be empty.", Toast.LENGTH_SHORT).show();
+            tweetBtn.setEnabled(false);
+        }
+        if (tweet.length() > MAX_TWEET_LENGTH) {
+            Toast.makeText(ComposeActivity.this,
+                    "Tweet is too long!", Toast.LENGTH_SHORT).show();
+            tweetBtn.setEnabled(false);
+        }
     }
 
+    // if user cancels the composing activity, goes back to timeline
     public void cancelCompose(View view) {
         // maybe pop up a dialog confirming if user want to cancel composing
         finish();

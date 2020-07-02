@@ -10,5 +10,6 @@
     <string name="client_name">name</string>
     <string name="time_ago">3m</string>
     <string name="connect_to_twitter">Connect to Twitter</string>
+    <string name="tweet_label">Tweet</string>
 
 </resources>

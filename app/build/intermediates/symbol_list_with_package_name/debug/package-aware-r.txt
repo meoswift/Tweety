@@ -1532,6 +1532,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id favorite
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1566,6 +1567,7 @@ id line3
 id listMode
 id list_item
 id masked
+id materialToolbar
 id media
 id message
 id middle
@@ -1608,6 +1610,7 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id options
 id outline
 id packed
 id parallax
@@ -1622,6 +1625,7 @@ id profile_image
 id progress_circular
 id progress_horizontal
 id radio
+id retweetBtn
 id right
 id right_icon
 id right_side
@@ -1701,6 +1705,7 @@ id timelineBar
 id title
 id titleDividerNoCustom
 id title_template
+id toolbar_title
 id top
 id topAppBar
 id topPanel
@@ -1783,6 +1788,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_compose
+layout activity_details
 layout activity_login
 layout activity_timeline
 layout custom_dialog
@@ -1948,6 +1954,7 @@ string search_menu_title
 string status_bar_notification_info_overflow
 string time_ago
 string tweet_content
+string tweet_label
 string username
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

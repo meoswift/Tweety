@@ -20,16 +20,20 @@
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/layout_activity_compose.xml.flat",
-        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/layout/activity_compose.xml"
-    },
-    {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/drawable_ic_vector_compose_dm.xml.flat",
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/drawable/ic_vector_compose_dm.xml"
     },
     {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/layout_activity_compose.xml.flat",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/layout/activity_compose.xml"
+    },
+    {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/layout_activity_details.xml.flat",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/layout/activity_details.xml"
     },
     {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
@@ -56,12 +60,12 @@
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/drawable_ic_vector_home_stroke.xml.flat",
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/drawable/ic_vector_home_stroke.xml"
+    },
+    {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_compose_tweet.png.flat",
@@ -84,12 +88,12 @@
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/drawable/ic_vector_gif_pill.xml"
     },
     {
-        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4_ic_launcher_twitter_round.png.flat",
-        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/mipmap-xxxhdpi-v4/ic_launcher_twitter_round.png"
-    },
-    {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/drawable_ic_vector_home.xml.flat",
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/drawable/ic_vector_home.xml"
+    },
+    {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4_ic_launcher_twitter_round.png.flat",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/mipmap-xxxhdpi-v4/ic_launcher_twitter_round.png"
     },
     {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_compose_tweet.png.flat",
@@ -116,12 +120,12 @@
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/drawable-anydpi/ic_compose_tweet.xml"
     },
     {
-        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/drawable_ic_vector_photo.xml.flat",
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/drawable/ic_vector_photo.xml"
+    },
+    {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/drawable_ic_vector_search_stroke.xml.flat",
@@ -176,12 +180,12 @@
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/drawable/ic_vector_notifications.xml"
     },
     {
-        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/drawable_ic_vector_location.xml.flat",
-        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/drawable/ic_vector_location.xml"
-    },
-    {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/drawable_ic_vector_search.xml.flat",
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/drawable/ic_vector_search.xml"
+    },
+    {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/drawable_ic_vector_location.xml.flat",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/drawable/ic_vector_location.xml"
     },
     {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/drawable_ic_vector_messages_stroke.xml.flat",
