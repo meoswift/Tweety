@@ -22,7 +22,7 @@ public final class ActivityDetailsBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final ImageView favorite;
+  public final ImageView favBtn;
 
   @NonNull
   public final MaterialToolbar materialToolbar;
@@ -40,6 +40,9 @@ public final class ActivityDetailsBinding implements ViewBinding {
   public final ImageView profileImage;
 
   @NonNull
+  public final ImageView replyBtn;
+
+  @NonNull
   public final ImageView retweetBtn;
 
   @NonNull
@@ -51,17 +54,19 @@ public final class ActivityDetailsBinding implements ViewBinding {
   @NonNull
   public final TextView username;
 
-  private ActivityDetailsBinding(@NonNull RelativeLayout rootView, @NonNull ImageView favorite,
+  private ActivityDetailsBinding(@NonNull RelativeLayout rootView, @NonNull ImageView favBtn,
       @NonNull MaterialToolbar materialToolbar, @NonNull ImageView media, @NonNull TextView name,
-      @NonNull GridLayout options, @NonNull ImageView profileImage, @NonNull ImageView retweetBtn,
-      @NonNull TextView text, @NonNull TextView toolbarTitle, @NonNull TextView username) {
+      @NonNull GridLayout options, @NonNull ImageView profileImage, @NonNull ImageView replyBtn,
+      @NonNull ImageView retweetBtn, @NonNull TextView text, @NonNull TextView toolbarTitle,
+      @NonNull TextView username) {
     this.rootView = rootView;
-    this.favorite = favorite;
+    this.favBtn = favBtn;
     this.materialToolbar = materialToolbar;
     this.media = media;
     this.name = name;
     this.options = options;
     this.profileImage = profileImage;
+    this.replyBtn = replyBtn;
     this.retweetBtn = retweetBtn;
     this.text = text;
     this.toolbarTitle = toolbarTitle;
@@ -95,9 +100,9 @@ public final class ActivityDetailsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.favorite;
-      ImageView favorite = rootView.findViewById(id);
-      if (favorite == null) {
+      id = R.id.favBtn;
+      ImageView favBtn = rootView.findViewById(id);
+      if (favBtn == null) {
         break missingId;
       }
 
@@ -131,6 +136,12 @@ public final class ActivityDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.replyBtn;
+      ImageView replyBtn = rootView.findViewById(id);
+      if (replyBtn == null) {
+        break missingId;
+      }
+
       id = R.id.retweetBtn;
       ImageView retweetBtn = rootView.findViewById(id);
       if (retweetBtn == null) {
@@ -155,8 +166,8 @@ public final class ActivityDetailsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityDetailsBinding((RelativeLayout) rootView, favorite, materialToolbar, media,
-          name, options, profileImage, retweetBtn, text, toolbarTitle, username);
+      return new ActivityDetailsBinding((RelativeLayout) rootView, favBtn, materialToolbar, media,
+          name, options, profileImage, replyBtn, retweetBtn, text, toolbarTitle, username);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -8,7 +8,7 @@ import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewbinding.ViewBinding;
@@ -19,7 +19,7 @@ import java.lang.String;
 
 public final class ActivityTimelineBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final CoordinatorLayout rootView;
 
   @NonNull
   public final ProgressBar indeterminateBar;
@@ -33,7 +33,7 @@ public final class ActivityTimelineBinding implements ViewBinding {
   @NonNull
   public final Toolbar timelineBar;
 
-  private ActivityTimelineBinding(@NonNull ConstraintLayout rootView,
+  private ActivityTimelineBinding(@NonNull CoordinatorLayout rootView,
       @NonNull ProgressBar indeterminateBar, @NonNull SwipeRefreshLayout swipeContainer,
       @NonNull RecyclerView timeline, @NonNull Toolbar timelineBar) {
     this.rootView = rootView;
@@ -45,7 +45,7 @@ public final class ActivityTimelineBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -94,7 +94,7 @@ public final class ActivityTimelineBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityTimelineBinding((ConstraintLayout) rootView, indeterminateBar,
+      return new ActivityTimelineBinding((CoordinatorLayout) rootView, indeterminateBar,
           swipeContainer, timeline, timelineBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
