@@ -176,6 +176,10 @@
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/drawable/bird.png"
     },
     {
+        "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/layout_activity_reply.xml.flat",
+        "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/layout/activity_reply.xml"
+    },
+    {
         "merged": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/build/intermediates/res/merged/debug/drawable_ic_vector_person.xml.flat",
         "source": "/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/res/drawable/ic_vector_person.xml"
     },

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-42:12
-INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-42:12
-INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-42:12
-INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-42:12
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-49:12
 MERGED from [androidx.databinding:viewbinding:4.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/fbee8d91505582d78dab4b49b9cc403a/jetified-viewbinding-4.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.codepath.libraries:android-oauth-handler:2.2.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/2d9d9dd85fb14ab1dde7bf2045ff2615/jetified-android-oauth-handler-2.2.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.1.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/081958b85be993b26123dd5b1125e07f/material-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -43,9 +43,9 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ltra
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/3f5e37635a712470204c0315e55f1003/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/552d05fff7df0b1caee9db39c74659fe/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/8a52da53b02a83b08615debb9b2e109c/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-42:12
-INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-42:12
-INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-42:12
+INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:2:1-49:12
 	package
 		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:3:5-51
 		INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml
@@ -69,7 +69,7 @@ ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/Andr
 	android:name
 		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:8:22-78
 application
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:10:5-40:19
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:10:5-47:19
 MERGED from [com.google.android.material:material:1.1.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/081958b85be993b26123dd5b1125e07f/material-1.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/081958b85be993b26123dd5b1125e07f/material-1.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/b05b2a738edf8b82097cbcc8ce0cfd69/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
@@ -100,58 +100,70 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ltra
 		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:15:9-40
 	android:name
 		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:11:9-35
-activity#com.codepath.apps.restclienttemplate.DetailsActivity
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:16:9-62
+activity#com.codepath.apps.restclienttemplate.activities.ReplyActivity
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:16:9-71
 	android:name
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:16:19-50
-activity#com.codepath.apps.restclienttemplate.ComposeActivity
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:17:9-53
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:16:19-59
+activity#com.codepath.apps.restclienttemplate.activities.DetailsActivity
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:17:9-23:20
+	android:parentActivityName
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:19:13-70
 	android:name
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:17:19-50
-activity#com.codepath.apps.restclienttemplate.TimelineActivity
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:18:9-54
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:18:13-55
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:20:13-22:64
+	android:value
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:22:17-61
 	android:name
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:18:19-51
-activity#com.codepath.apps.restclienttemplate.LoginActivity
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:19:9-39:20
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:21:17-63
+activity#com.codepath.apps.restclienttemplate.activities.ComposeActivity
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:24:9-64
+	android:name
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:24:19-61
+activity#com.codepath.apps.restclienttemplate.activities.TimelineActivity
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:25:9-65
+	android:name
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:25:19-62
+activity#com.codepath.apps.restclienttemplate.activities.LoginActivity
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:26:9-46:20
 	android:label
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:21:13-45
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:28:13-45
 	android:noHistory
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:22:13-37
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:29:13-37
 	android:theme
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:23:13-44
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:30:13-44
 	android:name
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:20:13-42
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:27:13-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:24:13-28:29
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:31:13-35:29
 action#android.intent.action.MAIN
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:25:17-69
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:32:17-69
 	android:name
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:25:25-66
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:32:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:27:17-77
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:34:17-77
 	android:name
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:27:27-74
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:34:27-74
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:@string/intent_host+data:scheme:@string/intent_scheme
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:29:13-38:29
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:36:13-45:29
 action#android.intent.action.VIEW
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:30:17-69
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:37:17-69
 	android:name
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:30:25-66
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:37:25-66
 category#android.intent.category.DEFAULT
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:32:17-76
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:39:17-76
 	android:name
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:32:27-73
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:39:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:33:17-78
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:40:17-78
 	android:name
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:33:27-75
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:40:27-75
 data
-ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:35:17-37:62
+ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:42:17-44:62
 	android:host
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:36:21-55
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:43:21-55
 	android:scheme
-		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:37:21-59
+		ADDED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:44:21-59
 uses-sdk
 INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml

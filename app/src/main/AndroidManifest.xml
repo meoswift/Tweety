@@ -13,11 +13,18 @@
         android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailsActivity"></activity>
-        <activity android:name=".ComposeActivity" />
-        <activity android:name=".TimelineActivity" />
+        <activity android:name=".activities.ReplyActivity"></activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.DetailsActivity"
+            android:parentActivityName=".activities.TimelineActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.TimelineActivity" />
+        </activity>
+        <activity android:name=".activities.ComposeActivity" />
+        <activity android:name=".activities.TimelineActivity" />
+        <activity
+            android:name=".activities.LoginActivity"
             android:label="@string/app_name"
             android:noHistory="true"
             android:theme="@style/AppTheme">

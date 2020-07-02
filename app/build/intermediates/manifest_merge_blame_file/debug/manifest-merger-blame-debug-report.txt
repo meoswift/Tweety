@@ -18,7 +18,7 @@
 12-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:8:22-78
 13
 14    <application
-14-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:10:5-40:19
+14-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:10:5-47:19
 15        android:name="com.codepath.apps.restclienttemplate.TwitterApp"
 15-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:11:9-35
 16        android:allowBackup="true"
@@ -33,65 +33,78 @@
 21        android:testOnly="true"
 22        android:theme="@style/AppTheme" >
 22-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:15:9-40
-23        <activity android:name="com.codepath.apps.restclienttemplate.DetailsActivity" />
-23-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:16:9-62
-23-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:16:19-50
-24        <activity android:name="com.codepath.apps.restclienttemplate.ComposeActivity" />
-24-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:17:9-53
-24-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:17:19-50
-25        <activity android:name="com.codepath.apps.restclienttemplate.TimelineActivity" />
-25-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:18:9-54
-25-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:18:19-51
-26        <activity
-26-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:19:9-39:20
-27            android:name="com.codepath.apps.restclienttemplate.LoginActivity"
-27-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:20:13-42
-28            android:label="@string/app_name"
-28-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:21:13-45
-29            android:noHistory="true"
-29-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:22:13-37
-30            android:theme="@style/AppTheme" >
-30-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:23:13-44
-31            <intent-filter>
-31-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:24:13-28:29
-32                <action android:name="android.intent.action.MAIN" />
-32-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:25:17-69
-32-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:25:25-66
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:27:17-77
-34-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:27:27-74
-35            </intent-filter>
-36            <intent-filter>
-36-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:29:13-38:29
-37                <action android:name="android.intent.action.VIEW" />
-37-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:30:17-69
-37-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:30:25-66
-38
-39                <category android:name="android.intent.category.DEFAULT" />
-39-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:32:17-76
-39-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:32:27-73
-40                <category android:name="android.intent.category.BROWSABLE" />
-40-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:33:17-78
-40-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:33:27-75
-41
-42                <data
-42-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:35:17-37:62
-43                    android:host="@string/intent_host"
-43-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:36:21-55
-44                    android:scheme="@string/intent_scheme" />
-44-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:37:21-59
-45            </intent-filter>
-46        </activity>
-47
-48        <service
-48-->[androidx.room:room-runtime:2.2.5] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/717f65762e8c098ad71282db36fbc63c/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
-49            android:name="androidx.room.MultiInstanceInvalidationService"
-49-->[androidx.room:room-runtime:2.2.5] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/717f65762e8c098ad71282db36fbc63c/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
-50            android:directBootAware="true"
-50-->[androidx.room:room-runtime:2.2.5] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/717f65762e8c098ad71282db36fbc63c/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
-51            android:exported="false" />
-51-->[androidx.room:room-runtime:2.2.5] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/717f65762e8c098ad71282db36fbc63c/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
-52    </application>
-53
-54</manifest>
+23        <activity android:name="com.codepath.apps.restclienttemplate.activities.ReplyActivity" />
+23-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:16:9-71
+23-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:16:19-59
+24        <activity
+24-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:17:9-23:20
+25            android:name="com.codepath.apps.restclienttemplate.activities.DetailsActivity"
+25-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:18:13-55
+26            android:parentActivityName="com.codepath.apps.restclienttemplate.activities.TimelineActivity" >
+26-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:19:13-70
+27            <meta-data
+27-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:20:13-22:64
+28                android:name="android.support.PARENT_ACTIVITY"
+28-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:21:17-63
+29                android:value=".activities.TimelineActivity" />
+29-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:22:17-61
+30        </activity>
+31        <activity android:name="com.codepath.apps.restclienttemplate.activities.ComposeActivity" />
+31-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:24:9-64
+31-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:24:19-61
+32        <activity android:name="com.codepath.apps.restclienttemplate.activities.TimelineActivity" />
+32-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:25:9-65
+32-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:25:19-62
+33        <activity
+33-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:26:9-46:20
+34            android:name="com.codepath.apps.restclienttemplate.activities.LoginActivity"
+34-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:27:13-53
+35            android:label="@string/app_name"
+35-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:28:13-45
+36            android:noHistory="true"
+36-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:29:13-37
+37            android:theme="@style/AppTheme" >
+37-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:30:13-44
+38            <intent-filter>
+38-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:31:13-35:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:32:17-69
+39-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:32:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:34:17-77
+41-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:34:27-74
+42            </intent-filter>
+43            <intent-filter>
+43-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:36:13-45:29
+44                <action android:name="android.intent.action.VIEW" />
+44-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:37:17-69
+44-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:37:25-66
+45
+46                <category android:name="android.intent.category.DEFAULT" />
+46-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:39:17-76
+46-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:39:27-73
+47                <category android:name="android.intent.category.BROWSABLE" />
+47-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:40:17-78
+47-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:40:27-75
+48
+49                <data
+49-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:42:17-44:62
+50                    android:host="@string/intent_host"
+50-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:43:21-55
+51                    android:scheme="@string/intent_scheme" />
+51-->/Users/ltran10/Desktop/AndroidStudioProjects/Tweety/app/src/main/AndroidManifest.xml:44:21-59
+52            </intent-filter>
+53        </activity>
+54
+55        <service
+55-->[androidx.room:room-runtime:2.2.5] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/717f65762e8c098ad71282db36fbc63c/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+56            android:name="androidx.room.MultiInstanceInvalidationService"
+56-->[androidx.room:room-runtime:2.2.5] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/717f65762e8c098ad71282db36fbc63c/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+57            android:directBootAware="true"
+57-->[androidx.room:room-runtime:2.2.5] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/717f65762e8c098ad71282db36fbc63c/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+58            android:exported="false" />
+58-->[androidx.room:room-runtime:2.2.5] /Users/ltran10/.gradle/caches/transforms-2/files-2.1/717f65762e8c098ad71282db36fbc63c/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+59    </application>
+60
+61</manifest>

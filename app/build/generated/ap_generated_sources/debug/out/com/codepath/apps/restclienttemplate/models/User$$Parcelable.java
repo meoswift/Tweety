@@ -51,6 +51,7 @@ public class User$$Parcelable
         } else {
             parcel$$1 .writeInt(identityMap$$0 .put(user$$1));
             parcel$$1 .writeString(user$$1 .name);
+            parcel$$1 .writeLong(user$$1 .id);
             parcel$$1 .writeString(user$$1 .profileImageUrl);
             parcel$$1 .writeString(user$$1 .username);
         }
@@ -79,6 +80,7 @@ public class User$$Parcelable
             user$$4 = new com.codepath.apps.restclienttemplate.models.User();
             identityMap$$1 .put(reservation$$0, user$$4);
             user$$4 .name = parcel$$3 .readString();
+            user$$4 .id = parcel$$3 .readLong();
             user$$4 .profileImageUrl = parcel$$3 .readString();
             user$$4 .username = parcel$$3 .readString();
             com.codepath.apps.restclienttemplate.models.User user$$3 = user$$4;

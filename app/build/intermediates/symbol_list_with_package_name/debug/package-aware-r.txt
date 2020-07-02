@@ -808,6 +808,7 @@ color dim_foreground_material_dark
 color dim_foreground_material_light
 color error_color_material_dark
 color error_color_material_light
+color favorite
 color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
@@ -885,6 +886,7 @@ color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
+color normal
 color notification_action_color_filter
 color notification_icon_bg_color
 color primary_dark_material_dark
@@ -895,6 +897,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color retweet
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -1792,6 +1795,7 @@ layout abc_tooltip
 layout activity_compose
 layout activity_details
 layout activity_login
+layout activity_reply
 layout activity_timeline
 layout custom_dialog
 layout design_bottom_navigation_item

@@ -2,7 +2,6 @@ package com.codepath.apps.restclienttemplate.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
-import com.codepath.apps.restclienttemplate.DetailsActivity;
+import com.codepath.apps.restclienttemplate.activities.DetailsActivity;
 import com.codepath.apps.restclienttemplate.R;
+import com.codepath.apps.restclienttemplate.activities.ReplyActivity;
 import com.codepath.apps.restclienttemplate.models.Tweet;
 
 import org.parceler.Parcels;
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -50,12 +49,13 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Tweet tweet = tweetList.get(position);
 
+        // Set all properties of a tweet in timeline
         holder.text.setText(tweet.text);
         holder.name.setText(tweet.user.name);
         holder.username.setText(tweet.user.username);
         holder.timeStamp.setText(tweet.timeStamp);
 
-        // display media on tweet if there is any
+        // Display media on tweet if there is any
         if (tweet.mediaUrl != null) {
             Glide.with(context)
                     .load(tweet.mediaUrl)
@@ -66,10 +66,19 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             holder.media.setImageResource(0);
         }
 
+        // Set media for user profile image
         Glide.with(context)
                 .load(tweet.user.profileImageUrl)
                 .circleCrop()
                 .into(holder.profileImage);
+
+        // Change the color of view based on favorited or not
+        if (tweet.favorited)
+            holder.favBtn.setColorFilter(context.getResources().getColor(R.color.favorite));
+
+        // Change the color of view based on retweeted or not
+        if (tweet.retweeted)
+            holder.rtwBtn.setColorFilter(context.getResources().getColor(R.color.retweet));
     }
 
     @Override
@@ -85,6 +94,9 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         public TextView text;
         public TextView timeStamp;
         public ImageView media;
+        public ImageView favBtn;
+        public ImageView rtwBtn;
+        public ImageView replyBtn;
 
         // this represents one line of tweet
         public ViewHolder(@NonNull final View itemView) {
@@ -97,8 +109,24 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             text = itemView.findViewById(R.id.text);
             timeStamp = itemView.findViewById(R.id.timeStamp);
             media = itemView.findViewById(R.id.media);
+            favBtn = itemView.findViewById(R.id.favBtn);
+            rtwBtn = itemView.findViewById(R.id.retweetBtn);
+            replyBtn = itemView.findViewById(R.id.replyBtn);
 
             itemView.setOnClickListener(this);
+
+            replyBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+                    Tweet tweet = tweetList.get(position);
+                    Intent intent = new Intent(context, ReplyActivity.class);
+                    intent.putExtra("tweet", Parcels.wrap(tweet));
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
+            });
+
         }
 
         @Override
@@ -116,6 +144,7 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
                 context.startActivity(intent);
             }
         }
+
     }
 
     public void clear() {

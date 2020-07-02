@@ -3,6 +3,12 @@ package com.codepath.apps.restclienttemplate.models;
 import android.text.format.DateUtils;
 import android.util.Log;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,12 +21,16 @@ import java.util.List;
 import java.util.Locale;
 
 @Parcel
+
 public class Tweet {
+    public long id;
     public String text;
-    public String timeStamp;
-    public long maxId;
-    public User user;
     public String mediaUrl;
+    public String timeStamp;
+    public User user;
+    public long userId;
+    public boolean retweeted;
+    public boolean favorited;
 
     public Tweet() {};
 
@@ -28,8 +38,10 @@ public class Tweet {
         Tweet tweet = new Tweet();
         tweet.text = data.getString("text");
         tweet.timeStamp = getRelativeTimeAgo(data.getString("created_at"));
-        tweet.maxId = data.getLong("id");
-        tweet.user = User.fromJson(data.getJSONObject("user"));
+        tweet.id = data.getLong("id");
+        User user = User.fromJson(data.getJSONObject("user"));
+        tweet.user = user;
+        tweet.userId = user.id;
         tweet.mediaUrl = getMedia(data.getJSONObject("entities"));
 
         return tweet;

@@ -2,4 +2,7 @@
 <resources>
     <color name="colorAccent">#7A212325</color>
     <color name="twitter">#1DA1F2</color>
+    <color name="favorite">#ff2052</color>
+    <color name="retweet">#FF43A047</color>
+    <color name="normal">#868C8F</color>
 </resources>
