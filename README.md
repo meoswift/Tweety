@@ -57,6 +57,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 * Retweeting and liking only works in detail view. If user clicks on these buttons in timeline, app will crash.
 * User can only reply from the timeline and cannot reply when they are in detail view. 
 * Maintaining persistence using SQLite was quite complicated to understand. I decided not to include this stretch feature.
+* When I like or retweet a tweet in details view, it doesn't update in Timeline. 
 
 
 ## Open-source libraries used
