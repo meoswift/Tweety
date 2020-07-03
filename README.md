@@ -2,14 +2,14 @@
 
 **Tweety** is an android app that allows a user to view their Twitter timeline and post a new tweet. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
-Time spent: **X** hours spent in total
+Time spent: **20** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-* [x]	User can **sign in to Twitter** using OAuth login
-* [x]	User can **view tweets from their home timeline**
+* [x] User can **sign in to Twitter** using OAuth login
+* [x] User can **view tweets from their home timeline**
   * [x] User is displayed the username, name, and body for each tweet
   * [x] User is displayed the [relative timestamp](https://gist.github.com/nesquena/f786232f5ef72f6e10a7) for each tweet "8m", "7h"
 * [x] User can **compose and post a new tweet**
@@ -25,7 +25,7 @@ The following **stretch** features are implemented:
 
 * [x] User is using **"Twitter branded" colors and styles**
 * [x] User sees an **indeterminate progress indicator** when any background or network task is happening
-* [x] User can **select "reply" from detail view to respond to a tweet**
+* [ ] User can **select "reply" from detail view to respond to a tweet**
   * [x] User that wrote the original tweet is **automatically "@" replied in compose**
 * [x] User can tap a tweet to **open a detailed tweet view**
   * [x] User can **take favorite (and unfavorite) or reweet** actions on a tweet
@@ -53,7 +53,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+* Required features were reasonable to implement, but the stretch goals took quite a bit of time.
+* Retweeting and liking only works in detail view. If user clicks on these buttons in timeline, app will crash.
+* User can only reply from the timeline and cannot reply when they are in detail view. 
+* Maintaining persistence using SQLite was quite complicated to understand. I decided not to include this stretch feature.
+
 
 ## Open-source libraries used
 
