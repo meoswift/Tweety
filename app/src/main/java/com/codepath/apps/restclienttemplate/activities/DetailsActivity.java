@@ -71,14 +71,19 @@ public class DetailsActivity extends AppCompatActivity {
                 .into(binding.profileImage);
     }
 
+    // When user clicks on favorite icon, fetch the API to favorite that tweet
     public void onFavoriteTweet(View view) {
         client.favoriteTweet(tweet.id, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Headers headers, JSON json) {
+                // Change the color of icon
                 binding.favBtn.setColorFilter(getResources().getColor(R.color.favorite));
+                // Update tweet's favorited property
                 tweet.favorited = true;
             }
 
+            // On failure happens when user try to click on an already favorited tweet.
+            // In this case, unfavorite the tweet
             @Override
             public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
                 Log.d("DetailsActivity", "onFailure favorite tweet!" + response);
@@ -87,10 +92,12 @@ public class DetailsActivity extends AppCompatActivity {
         });
     }
 
+    // When user clicks on the favorite icon twice
     private void unfavoriteTweet(long id) {
         client.unfavoriteTweet(id, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Headers headers, JSON json) {
+                // change the color of view and property of Tweet object
                 binding.favBtn.setColorFilter(getResources().getColor(R.color.normal));
                 tweet.favorited = false;
             }
@@ -102,14 +109,18 @@ public class DetailsActivity extends AppCompatActivity {
         });
     }
 
+    // When user clicks on retweet icon, fetch the API to retweet that tweet
     public void onRetweet(View view) {
         client.retweetTweet(tweet.id, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Headers headers, JSON json) {
+                // Change color of view and set property of Tweet object
                 binding.retweetBtn.setColorFilter(getResources().getColor(R.color.retweet));
                 tweet.retweeted = true;
             }
 
+            // On failure happens when user try to click on an already retweeted tweet.
+            // In this case, unretweet the tweet
             @Override
             public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
                 Log.d("DetailsActivity", "onFailure retweet!" + response);
@@ -118,10 +129,12 @@ public class DetailsActivity extends AppCompatActivity {
         });
     }
 
+    // When user clicks on the retweet icon twice
     private void unretweet (long id) {
         client.unretweetTweet(id, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Headers headers, JSON json) {
+                // change the color of view and property of Tweet object
                 binding.retweetBtn.setColorFilter(getResources().getColor(R.color.normal));
                 tweet.retweeted = false;
             }

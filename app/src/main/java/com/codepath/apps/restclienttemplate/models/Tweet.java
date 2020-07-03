@@ -53,6 +53,8 @@ public class Tweet {
         sf.setLenient(true);
 
         String relativeDate = "";
+
+        // Parse the time given by Twitter API into "2 mins. ago" format
         try {
             long dateMillis = sf.parse(rawJsonDate).getTime();
             relativeDate = DateUtils.getRelativeTimeSpanString(dateMillis,
@@ -63,24 +65,32 @@ public class Tweet {
             e.printStackTrace();
         }
 
+        // Reformat "2 mins ago" into "2m" - Twitter format
+        // Does not work for all cases.
         String [] time = relativeDate.split(" ");
         relativeDate = time[0] + time[1].charAt(0);
 
         return relativeDate;
     }
 
+    // Function to access the array of media objects and get the link to first media
     public static String getMedia(JSONObject json) {
         try {
+            // get a list of media objects
             JSONArray mediaObjects = json.getJSONArray("media");
+            // get the first object from list
             JSONObject firstMedia = mediaObjects.getJSONObject(0);
+            // get the url of first media
             String url = firstMedia.getString("media_url_https");
             return url;
         } catch (JSONException e) {
             e.printStackTrace();
+            // when there is no media in the tweet, return blank
             return null;
         }
     }
 
+    // Function to convert a json array of Twitter tweet objects into a List of Tweet objects
     public static List<Tweet> fromJsonArray(JSONArray data) throws JSONException {
         List<Tweet> tweets = new ArrayList<>();
         for (int i = 0; i < data.length(); i++) {

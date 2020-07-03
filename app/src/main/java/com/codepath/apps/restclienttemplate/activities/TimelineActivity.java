@@ -94,6 +94,7 @@ public class TimelineActivity extends AppCompatActivity {
         scrollListener = new EndlessRecyclerViewScrollListener(layoutManager) {
             @Override
             public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
+                Log.d("TimelineActivity", "onLoad" + page);
                 loadNextDataFromApi();
             }
         };
@@ -191,9 +192,8 @@ public class TimelineActivity extends AppCompatActivity {
                 JSONArray data = json.jsonArray;
                 try {
                     // Append the new data objects to the existing set of items inside the array of items
-                    adapter.addAll(Tweet.fromJsonArray(data));
                     // Notify the adapter of the new items made with `notifyItemRangeInserted()
-                    adapter.notifyDataSetChanged();
+                    adapter.addAll(Tweet.fromJsonArray(data));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

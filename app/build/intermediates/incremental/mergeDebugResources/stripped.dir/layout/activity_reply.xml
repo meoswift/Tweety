@@ -29,6 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="In reply to..."
             android:gravity="start|top"
             android:imeOptions="actionDone"
             android:inputType="textMultiLine"
